@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Stand — Survival Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">SURVIVAL ARENA</p>
+        <h1>LAST <span>STAND</span></h1>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        Arena online
+      </div>
+    </header>
+
+    <section class="game-stats" aria-label="Game statistics">
+      <div class="stat">
+        <span>HEALTH</span>
+        <strong id="healthText">100 / 100</strong>
+        <div class="health-track">
+          <div id="healthBar"></div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <span>SCORE</span>
+        <strong id="scoreText">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>TIME</span>
+        <strong id="timeText">00:00</strong>
+      </div>
+
+      <div class="stat">
+        <span>WAVE</span>
+        <strong id="waveText">1</strong>
+      </div>
+    </section>
+
+    <section class="arena">
+      <canvas
+        id="gameCanvas"
+        width="1000"
+        height="600"
+        aria-label="Survival game arena. Move using WASD or arrow keys."
+      ></canvas>
+
+      <div id="startScreen" class="overlay">
+        <div class="overlay-card">
+          <span class="game-icon" aria-hidden="true">✦</span>
+          <p class="eyebrow">ENTER THE ARENA</p>
+          <h2>How long can you survive?</h2>
+          <p>
+            Your first mission: explore the arena and master your movement.
+          </p>
+
+          <button id="startButton" type="button">Start Training →</button>
+
+          <small>Move with WASD or arrow keys</small>
+        </div>
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move</p>
+      <p>Movement training · Enemies coming next</p>
+    </footer>
+  </main>
+</body>
+</html>
